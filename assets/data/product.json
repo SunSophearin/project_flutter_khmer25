@@ -1,0 +1,72 @@
+[
+  {
+    "id": "p1",
+    "name_km": "ទំពាំងត្រីពោ ឈុតធម្មតា",
+    "image_url": "https://images.pexels.com/photos/4110540/pexels-photo-4110540.jpeg",
+    "price": 4.5,
+    "discount_percent": null
+  },
+  {
+    "id": "p2",
+    "name_km": "សម្លរខ្យងបង្គា ឈុតធ្វើម្ហូប",
+    "image_url": "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg",
+    "price": 5.2,
+    "discount_percent": null
+  },
+  {
+    "id": "p3",
+    "name_km": "បន្លែស្រស់ ចម្រុះ ១គីឡូ",
+    "image_url": "https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg",
+    "price": 2.3,
+    "discount_percent": null
+  },
+  {
+    "id": "p4",
+    "name_km": "ផ្លែឈើចម្រុះ សម្រាប់ឆុងទឹកផ្លែឈើ",
+    "image_url": "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg",
+    "price": 3.8,
+    "discount_percent": null
+  },
+  {
+    "id": "p5",
+    "name_km": "មីចិនស្ងួត ជាមួយគ្រឿងទេស",
+    "image_url": "https://images.pexels.com/photos/1437268/pexels-photo-1437268.jpeg",
+    "price": 1.9,
+    "discount_percent": null
+  },
+  {
+    "id": "d1",
+    "name_km": "ឈុតម្ហូបឆាដាំទាខ្ចី",
+    "image_url": "https://images.pexels.com/photos/5710173/pexels-photo-5710173.jpeg",
+    "price": 6.8,
+    "discount_percent": 20
+  },
+  {
+    "id": "d2",
+    "name_km": "ឈុតសម្លរគ្រឿងទេសថ្លំាង",
+    "image_url": "https://images.pexels.com/photos/3731474/pexels-photo-3731474.jpeg",
+    "price": 5.9,
+    "discount_percent": 15
+  },
+  {
+    "id": "d3",
+    "name_km": "សាច់មាន់+បន្លែ 1 គីឡូ",
+    "image_url": "https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg",
+    "price": 4.2,
+    "discount_percent": 10
+  },
+  {
+    "id": "d4",
+    "name_km": "កញ្ចប់គ្រឿងទេសបំពងមាន់",
+    "image_url": "https://images.pexels.com/photos/4106480/pexels-photo-4106480.jpeg",
+    "price": 3.5,
+    "discount_percent": 25
+  },
+  {
+    "id": "d5",
+    "name_km": "ឈុតបាយសាច់មាន់ចង្កៀង",
+    "image_url": "https://images.pexels.com/photos/4079527/pexels-photo-4079527.jpeg",
+    "price": 3.9,
+    "discount_percent": 18
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "name": "អង្ករខ្មែរ",
+    "slug": "khmerrice",
+    "image_url": "https://khmer25.com/cms/assets/2dd2f58a-1cb1-4a69-a2b3-4716fc786337",
+    "subcategories": []
+  },
+  {
+    "name": "ផលិតផលកុមារ",
+    "slug": "kid-product",
+    "image_url": "https://khmer25.com/cms/assets/22291b1f-ecd7-4312-bdf4-32c102bfa7d4",
+    "subcategories": [
+      {
+        "name": "អាហារកុមារ",
+        "slug": "food",
+        "image_url": "https://khmer25.com/cms/sub/food.png"
+      }
+    ]
+  },
+  {
+    "name": "ផលិតផលខ្មែរ",
+    "slug": "khmer-products",
+    "image_url": "https://khmer25.com/cms/assets/2a3ce37b-cb80-4291-882b-c734b4bf5015",
+    "subcategories": [
+      {
+        "name": "អង្ករ (ផលិតផលខ្មែរ)",
+        "slug": "rice",
+        "image_url": "https://khmer25.com/cms/sub/rice.png"
+      },
+      {
+        "name": "គ្រឿងបរិភោគ / អ្វីៗដែលញ៉ាំ",
+        "slug": "things-to-eat",
+        "image_url": "https://khmer25.com/cms/sub/things-to-eat.png"
+      },
+      {
+        "name": "កសិកម្ម",
+        "slug": "agriculture",
+        "image_url": "https://khmer25.com/cms/sub/agriculture.png"
+      },
+      {
+        "name": "ផលិតផលសម្អាត (ខ្មែរ)",
+        "slug": "cleaning-products-khmer",
+        "image_url": "https://khmer25.com/cms/sub/cleaning-products-khmer.png"
+      },
+      {
+        "name": "គ្រឿងទេស / Grocery (ខ្មែរ)",
+        "slug": "grocery",
+        "image_url": "https://khmer25.com/cms/sub/grocery.png"
+      }
+    ]
+  },
+  {
+    "name": "សម្ភារៈប្រើក្នុងផ្ទះ",
+    "slug": "household-items",
+    "image_url": "https://khmer25.com/cms/assets/b805054c-fb89-4a57-9029-999304b33cf0",
+    "subcategories": []
+  },
+  {
+    "name": "អារហារឆ្អិន",
+    "slug": "cooked-food",
+    "image_url": "https://khmer25.com/cms/assets/c77349ba-566e-4c6f-b51c-cdff0f1af48d",
+    "subcategories": [
+      {
+        "name": "បាយម្ហូប / Heavy meal",
+        "slug": "heavy-meal",
+        "image_url": "https://khmer25.com/cms/sub/heavy-meal.png"
+      },
+      {
+        "name": "ទឹកផ្លែឈើ / ទឹកពិសារ",
+        "slug": "juice",
+        "image_url": "https://khmer25.com/cms/sub/juice.png"
+      }
+    ]
+  },
+  {
+    "name": "ភេសជ្ជៈ",
+    "slug": "drinks",
+    "image_url": "https://khmer25.com/cms/assets/996220e5-a033-4f38-a3a0-968bfca0b640",
+    "subcategories": [
+      {
+        "name": "Soft drink",
+        "slug": "soft-drink",
+        "image_url": "https://khmer25.com/cms/sub/soft-drink.png"
+      },
+      {
+        "name": "Beer",
+        "slug": "beer",
+        "image_url": "https://khmer25.com/cms/sub/beer.png"
+      }
+    ]
+  },
+  {
+    "name": "សាច់",
+    "slug": "meat",
+    "image_url": "https://khmer25.com/cms/assets/f9a262ad-393c-49c2-8973-0795fe234ca1",
+    "subcategories": [
+      {
+        "name": "សាច់ជ្រូក / សាច់គោ / សាច់មាន់",
+        "slug": "pork-beef",
+        "image_url": "https://khmer25.com/cms/sub/pork-beef.png"
+      }
+    ]
+  },
+  {
+    "name": "គ្រឿងសម្អាង",
+    "slug": "cosmetics",
+    "image_url": "https://khmer25.com/cms/assets/f008d7d6-215c-47db-931f-ca3436628194",
+    "subcategories": []
+  },
+  {
+    "name": "ផ្លែឈើ",
+    "slug": "fruit",
+    "image_url": "https://khmer25.com/cms/assets/ee088fa4-258d-4bd8-a7a0-b53bec84e521",
+    "subcategories": [
+      {
+        "name": "ផ្លែឈើខ្មែរ",
+        "slug": "khmer",
+        "image_url": "https://khmer25.com/cms/sub/khmer.png"
+      }
+    ]
+  },
+  {
+    "name": "បន្លែ",
+    "slug": "vegetable",
+    "image_url": "https://khmer25.com/cms/assets/8d89d971-31d9-414b-8a9a-1be68d99f5fa",
+    "subcategories": [
+      {
+        "name": "បន្លែផ្លែ / Fruity vegetable",
+        "slug": "fruity",
+        "image_url": "https://khmer25.com/cms/sub/fruity.png"
+      }
+    ]
+  },
+  {
+    "name": "ម្ហូបឈុត",
+    "slug": "meal-packages",
+    "image_url": "https://khmer25.com/cms/assets/df37b794-a23a-4fa9-afca-e4d38ef72f9c",
+    "subcategories": [
+      {
+        "name": "ម្ហូបឈុត ឆា / Stir-fry set",
+        "slug": "stir-fry",
+        "image_url": "https://khmer25.com/cms/sub/stir-fry.png"
+      }
+    ]
+  },
+  {
+    "name": "គ្រឿងទេស / Grocery",
+    "slug": "grocery",
+    "image_url": "https://khmer25.com/cms/assets/d4468cd3-2de8-4ab0-bf3a-8b93a8c1c963",
+    "subcategories": [
+      {
+        "name": "មី គុយទាវ / ម្សៅ / អង្ករក្ស័យ",
+        "slug": "rice-noodle",
+        "image_url": "https://khmer25.com/cms/sub/rice-noodle.png"
+      },
+      {
+        "name": "កំប៉ុង / ជ្រក់ / បន្លែក្រៀម",
+        "slug": "can-dry",
+        "image_url": "https://khmer25.com/cms/sub/can-dry.png"
+      }
+    ]
+  }
+]

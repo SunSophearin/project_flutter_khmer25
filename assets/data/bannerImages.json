@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image_url": "https://khmer25.com/cms/assets/f58bc210-18b4-4e5b-8c72-e4e8f564b928",
+    "title": "Fresh Fruits Discount",
+    "redirect_url": "/category/fruit"
+  },
+  {
+    "id": 2,
+    "image_url": "https://khmer25.com/cms/assets/c9351b1c-8a7f-4512-af04-4e019cf3517b",
+    "title": "Vegetable Pack Promo",
+    "redirect_url": "/category/vegetable"
+  },
+  {
+    "id": 3,
+    "image_url": "https://khmer25.com/cms/assets/a2757a99-58db-4a6b-a4f9-fb51f93d7a21",
+    "title": "Daily Grocery Deals",
+    "redirect_url": "/category/grocery"
+  },
+  {
+    "id": 4,
+    "image_url": "https://khmer25.com/cms/assets/79e6be06-8e5e-4209-b0f5-8f130f14b443",
+    "title": "Khmer Organic Products",
+    "redirect_url": "/category/khmer-products"
+  }
+]
