@@ -1,61 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter_khmer25/models/category_model.dart';
-import 'package:project_flutter_khmer25/providers/category_provider.dart';
 import 'package:provider/provider.dart';
 
-/// List Navigation ប្រភេទផលិតផល
-class HomeCategoryNavbar extends StatefulWidget {
-  const HomeCategoryNavbar({super.key});
+import 'package:project_flutter_khmer25/models/category_model.dart';
+import 'package:project_flutter_khmer25/providers/category_provider.dart';
 
-  @override
-  State<HomeCategoryNavbar> createState() => _HomeCategoryNavbarState();
-}
+class HomeCategoryNavbar extends StatelessWidget {
+  final void Function(CategoryModel cat) onOpenCategory;
 
-class _HomeCategoryNavbarState extends State<HomeCategoryNavbar> {
+  const HomeCategoryNavbar({super.key, required this.onOpenCategory});
+
   @override
   Widget build(BuildContext context) {
-    final categoryProv = context.watch<CategoryProvider>();
+    final provider = context.watch<CategoryProvider>();
 
-    if (categoryProv.isLoading) {
-      return const SizedBox(
-        height: 90,
-        child: Center(child: CircularProgressIndicator()),
-      );
-    }
-
-    if (categoryProv.error != null) {
-      return SizedBox(
-        height: 90,
-        child: Center(child: Text('Error: ${categoryProv.error}')),
-      );
-    }
-
-    final List<CategoryModel> categories = categoryProv.categories;
-
-    if (categories.isEmpty) {
-      return const SizedBox(
-        height: 90,
-        child: Center(child: Text('No categories')),
-      );
-    }
+    if (provider.isLoading) return _stateBox(const CircularProgressIndicator());
+    if (provider.error != null) return _stateBox(Text(provider.error!));
+    if (provider.categories.isEmpty)
+      return _stateBox(const Text('No categories'));
 
     return SizedBox(
       height: 110,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        itemCount: provider.categories.length,
         separatorBuilder: (_, __) => const SizedBox(width: 10),
-        itemBuilder: (context, index) {
-          final cat = categories[index];
+        itemBuilder: (_, i) {
+          final cat = provider.categories[i];
 
           return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              InkWell(
-                onTap: () {
-                  // TODO: open category page or filter by cat.slug
-                  // e.g. print(cat.url);
-                },
-                borderRadius: BorderRadius.circular(16),
+              GestureDetector(
+                onTap: () => onOpenCategory(cat), // ✅ keep navbar + bottom bar
                 child: Container(
                   width: 64,
                   height: 64,
@@ -65,14 +42,11 @@ class _HomeCategoryNavbarState extends State<HomeCategoryNavbar> {
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
-                    child: Image.network(
-                      cat.imageUrl, // ⬅⬅ USE YOUR URL HERE
-                      fit: BoxFit.cover, // fill container
-                    ),
+                    child: _CategoryImage(cat.image),
                   ),
                 ),
               ),
-              // const SizedBox(height: 4),
+              const SizedBox(height: 6),
               SizedBox(
                 width: 72,
                 child: Text(
@@ -87,6 +61,27 @@ class _HomeCategoryNavbarState extends State<HomeCategoryNavbar> {
           );
         },
       ),
+    );
+  }
+
+  Widget _stateBox(Widget child) =>
+      SizedBox(height: 110, child: Center(child: child));
+}
+
+class _CategoryImage extends StatelessWidget {
+  final String? url;
+  const _CategoryImage(this.url);
+
+  @override
+  Widget build(BuildContext context) {
+    if (url == null || url!.isEmpty) {
+      return const Icon(Icons.image_not_supported);
+    }
+
+    return Image.network(
+      url!,
+      fit: BoxFit.cover,
+      errorBuilder: (_, __, ___) => const Icon(Icons.broken_image),
     );
   }
 }

@@ -1,70 +1,72 @@
 class SubcategoryModel {
+  final int id;
   final String name;
   final String slug;
-  final String imageUrl; // from "image_url" in JSON
+  final String? image;
+  final int? parent; // parent id
 
   SubcategoryModel({
+    required this.id,
     required this.name,
     required this.slug,
-    required this.imageUrl,
+    this.image,
+    this.parent,
   });
 
   factory SubcategoryModel.fromJson(Map<String, dynamic> json) {
     return SubcategoryModel(
-      name: json['name'] ?? '',
-      slug: json['slug'] ?? '',
-      imageUrl: json['image_url'] ?? '',
+      id: (json['id'] ?? 0) as int,
+      name: (json['name'] ?? '') as String,
+      slug: (json['slug'] ?? '') as String,
+      image: json['image'] as String?,
+      parent: (json['parent'] ?? json['parent_id']) as int?,
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'name': name,
-      'slug': slug,
-      'image_url': imageUrl,
-    };
   }
 }
 
 class CategoryModel {
+  final int id;
   final String name;
   final String slug;
-  final String imageUrl; // from "image_url" in JSON
+  final String? image;
+  final int? parent; // null = parent category
   final List<SubcategoryModel> subcategories;
 
   CategoryModel({
+    required this.id,
     required this.name,
     required this.slug,
-    required this.imageUrl,
-    required this.subcategories,
+    this.image,
+    this.parent,
+    this.subcategories = const [],
   });
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) {
-    final subs = json['subcategories'] as List<dynamic>? ?? [];
+    final rawSubs =
+        json['subcategories'] ??
+        json['children'] ??
+        json['sub_categories'] ??
+        json['subs'];
+
+    final List subsList = rawSubs is List ? rawSubs : const [];
 
     return CategoryModel(
-      name: json['name'] ?? '',
-      slug: json['slug'] ?? '',
-      imageUrl: json['image_url'] ?? '',
-      subcategories: subs
-          .map((e) => SubcategoryModel.fromJson(e as Map<String, dynamic>))
+      id: (json['id'] ?? 0) as int,
+      name: (json['name'] ?? '') as String,
+      slug: (json['slug'] ?? '') as String,
+      image: json['image'] as String?,
+      parent: (json['parent'] ?? json['parent_id']) as int?,
+      subcategories: subsList
+          .whereType<Map<String, dynamic>>()
+          .map(SubcategoryModel.fromJson)
           .toList(),
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'name': name,
-      'slug': slug,
-      'image_url': imageUrl,
-      'subcategories': subcategories.map((e) => e.toJson()).toList(),
-    };
-  }
-
-  /// Helper សម្រាប់ Provider
   static List<CategoryModel> fromJsonList(List<dynamic> list) {
     return list
-        .map((e) => CategoryModel.fromJson(e as Map<String, dynamic>))
+        .whereType<Map<String, dynamic>>()
+        .map(CategoryModel.fromJson)
         .toList();
   }
 }
